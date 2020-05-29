@@ -1,0 +1,55 @@
+body{
+	background-color: #092E20;
+
+}
+
+img{
+	width: 65px;
+	height: 92px;
+	border-radius: 5px;
+}
+
+.poker-game{
+	perspective: 1000px;
+	display: flex;
+
+}
+
+.poker-cards{
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform .5s;
+
+}
+
+
+
+.poker-cards:active{
+	transform: scale(0.97);
+	transition: transform .2s;
+
+}
+
+.poker-cards.flip{
+	transform: rotateY(180deg);
+}
+
+.front-card,
+.back-card{
+	backface-visibility: hidden;
+	position: absolute;
+}
+
+
+.front-card{
+	transform: rotateY(180deg);
+}
+
+
+
+#button{
+	border-radius: 50px;
+	position: absolute;
+	left:10px;
+	top:150px;
+}
